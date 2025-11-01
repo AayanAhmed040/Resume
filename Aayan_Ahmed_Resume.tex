@@ -1,0 +1,198 @@
+% Made in Overleaf
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage[margin=1.4cm]{geometry}
+
+
+\urlstyle{same}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+
+\addtolength{\oddsidemargin}{-0.15in}
+\addtolength{\textwidth}{0.3in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-0pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small{#2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}\vspace{0pt}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Large \scshape Aayan Ahmed} \\[2mm]
+    \footnotesize \raisebox{-0.1\height}
+    {\faEnvelope\  \underline{aayanahmed040@gmail.com}} ~ 
+    {\faLinkedin\ \underline{\href{https://www.linkedin.com/in/aayan-ahmed-a10bab349/}{linkedin.com/in/aayan-ahmed-a10bab349/}}}  ~
+    {\faGithub\ \underline{\href{https://github.com/AayanAhmed040}{github.com/AayanAhmed040}}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education} \\[1mm]
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Mount Royal University}{Expected Graduation: May 2029}
+      {Bachelor of Science | Major in Data Science}{Calgary, AB}
+  \resumeSubHeadingListEnd
+    \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework}: 
+          Data Science I: Introduction to Databases, 
+          Introduction to Problem Solving \& Programming (Python), 
+          Concepts of Mathematical Statistics, 
+          Linear Algebra, 
+          Calculus I
+        }
+    \resumeItemListEnd
+    \vspace{-12pt}
+    
+%-----------SUMMARY OF QUALIFICATIONS-----------
+\section{Summary of Qualifications}
+    \resumeItemListStart
+        \resumeItem{Proven ability to deliver real-world solutions, including developing, deploying, and \textbf{selling a custom Python bot} to multiple clients.}
+        \resumeItem{Proficient in \textbf{Python} and \textbf{Java} with hands-on experience building data pipelines and data-focused applications.}
+        \resumeItem{Experienced in technical mentorship and communication from instructing and \textbf{debugging Python code} for students at Steamoji.}
+    \resumeItemListEnd
+    \vspace{-12pt}
+    
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{     
+     \textbf{Languages}{: Python, Java, SQL} \\[1mm]
+     \textbf{Libraries/Frameworks}{: Pandas, NumPy, OpenCV, MediaPipe} \\[1mm]
+     \textbf{Tools \& Other}{: Git, GitHub, VS Code, APIs, Data Pipelines}
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------PROJECTS-----------
+\section{Projects} 
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+    %PROJECT 1: Face Tracking App
+    \resumeProjectHeading
+        {\textbf{Face-Tracking GIF Application} $|$ \href{https://github.com/AayanAhmed040/Face-Tracking-App}{github.com/AayanAhmed040/Face-Tracking-App}}
+        {\textbf{Oct 2025 – Present}}
+        \resumeItemListStart
+            \resumeItem{Developing a real-time computer vision application using \textbf{Python}, \textbf{OpenCV}, and \textbf{MediaPipe}.}
+            \resumeItem{Implementing facial landmark detection to track user expressions and head pose to trigger corresponding GIF overlays.}
+        \resumeItemListEnd
+    \vspace{-10pt}
+        
+    %PROJECT 2: Telegram Forwarder
+    \resumeProjectHeading
+        {\textbf{Telegram-to-Discord Forwarder} $|$ \href{https://github.com/AayanAhmed040/Telegram-Discord-Forwarder}{github.com/AayanAhmed040/Telegram-Discord-Forwarder}}
+        {\textbf{Feb 2025}}
+        \resumeItemListStart
+            \resumeItem{Engineered a cross-platform data pipeline in \textbf{Python} to automatically scrape messages from Telegram channels to Discord.}
+            \resumeItem{Utilized \textbf{Telethon} and \textbf{discord.py} libraries to manage asynchronous event handling.}
+            \resumeItem{Managed user data, channel lists, and destination webhooks using \textbf{JSON} configuration files.}
+        \resumeItemListEnd
+    \vspace{-10pt}
+
+    %PROJECT 3: Crypto Sim
+    \resumeProjectHeading
+        {\textbf{Crypto Trading Simulator} $|$ \href{https://github.com/AayanAhmed040/Crypto-Trading-Sim}{github.com/AayanAhmed040/Crypto-Trading-Sim}}
+        {\textbf{May 2024}}
+        \resumeItemListStart
+            \resumeItem{Developed a console-based crypto trading simulator in \textbf{Java} allowing users to create accounts and manage a portfolio.}
+            \resumeItem{Integrated the \textbf{CoinGecko API} to fetch and display real-time cryptocurrency prices in CAD.}
+            \resumeItem{Implemented data persistence for all user accounts, passwords, and portfolio balances using \textbf{CSV} flat-files.}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-15pt}
+  
+%Experience
+\section{Work Experience}
+    \resumeSubHeadingListStart
+    
+        %FREELANCE EXPERIENCE
+        \resumeSubheading{Freelance Discord Bot Developer}{Feb 2022 – June 2023}{Self-Employed}{Calgary, AB}
+        \resumeItemListStart
+            \resumeItem{Developed, deployed, and sold a custom \textbf{Python} Discord bot to multiple clients.}
+            \resumeItem{Engineered a key feature to track user message activity, providing clients with community engagement metrics.}
+            \resumeItem{Created an economy system (daily currency, gambling) using \textbf{JSON} to drive user retention and activity for clients.}
+            \resumeItem{Managed the full project life-cycle, from client consultation and feature design to deployment and support.}
+        \resumeItemListEnd
+    \vspace{-5pt}
+
+        %STEAMOJI EXPERIENCE
+        \resumeSubheading{Steamoji}{Jan 2024 – May 2025}{Facilitator}{Calgary, AB}
+        \resumeItemListStart
+            \resumeItem{Instructed students (ages 5-14) in core programming concepts, including \textbf{Python} and Scratch.}
+            \resumeItem{Explained complex programming logic and problem-solving strategies to students one-on-one, reinforcing video-based curriculum.}
+            \resumeItem{Debugged and troubleshot student-written \textbf{Python} code, identifying errors in logic, syntax, and flow.}
+            \resumeItem{Mentored students across multiple STEM disciplines, including 3D modeling and engineering principles, adapting explanations.}
+            \resumeItem{Collaborated daily with a facilitator team to manage classroom logistics and communicate student progress clearly to parents and managers.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \vspace{-12pt}
+
+\end{document}
