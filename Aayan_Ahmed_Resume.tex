@@ -1,4 +1,5 @@
 % Made in Overleaf
+% Base Resume Nov 2026
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -18,6 +19,7 @@
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 \usepackage[margin=1.4cm]{geometry}
+\usepackage{xcolor}
 
 
 \urlstyle{same}
@@ -84,9 +86,10 @@
 \begin{center}
     {\Large \scshape Aayan Ahmed} \\[2mm]
     \footnotesize \raisebox{-0.1\height}
-    {\faEnvelope\  \underline{aayanahmed040@gmail.com}} ~ 
+    \faPhone\ \underline{(403) 708-0861} ~ 
+    {\faEnvelope\ \underline{aayanahmed040@gmail.com}} ~ 
     {\faLinkedin\ \underline{\href{https://www.linkedin.com/in/aayan-ahmed-a10bab349/}{linkedin.com/in/aayan-ahmed-a10bab349/}}}  ~
-    {\faGithub\ \underline{\href{https://github.com/AayanAhmed040}{github.com/AayanAhmed040}}}
+    {\faGithub\ \underline{\href{https://github.com/AayanAhmed040}{github.com/AayanAhmed040}}}\\[1mm]
     \vspace{-8pt}
 \end{center}
 
@@ -100,31 +103,37 @@
   \resumeSubHeadingListEnd
     \resumeItemListStart
         \resumeItem{\textbf{Relevant Coursework}: 
-          Data Science I: Introduction to Databases, 
-          Introduction to Problem Solving \& Programming (Python), 
-          Concepts of Mathematical Statistics, 
+          Data Science I, 
+          Problem Solving \& Programming (Python), 
+          Mathematical Statistics, 
           Linear Algebra, 
           Calculus I
         }
     \resumeItemListEnd
     \vspace{-12pt}
+
     
 %-----------SUMMARY OF QUALIFICATIONS-----------
 \section{Summary of Qualifications}
-    \resumeItemListStart
-        \resumeItem{Proven ability to deliver real-world solutions, including developing, deploying, and \textbf{selling a custom Python bot} to multiple clients.}
-        \resumeItem{Proficient in \textbf{Python} and \textbf{Java} with hands-on experience building data pipelines and data-focused applications.}
-        \resumeItem{Experienced in technical mentorship and communication from instructing and \textbf{debugging Python code} for students at Steamoji.}
-    \resumeItemListEnd
-    \vspace{-12pt}
+    \vspace{-20pt}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {}{}
+        \resumeItemListStart
+            \resumeItem{Data Science undergraduate proficient in \textbf{Python}, \textbf{SQL}, and \textbf{Applied ML} logic (OpenCV, MediaPipe).}
+            \resumeItem{Proven ability to engineer scalable solutions, including a \textbf{custom Python bot ecosystem} sold to multiple clients.}
+            \resumeItem{Strong technical communicator with experience mentoring students in Python debugging and logic at Steamoji.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \vspace{-15pt}
     
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{     
-     \textbf{Languages}{: Python, Java, SQL} \\[1mm]
+     \textbf{Languages}{: Python, Java, SQL, JavaScript} \\[1mm]
      \textbf{Libraries/Frameworks}{: Pandas, NumPy, OpenCV, MediaPipe} \\[1mm]
-     \textbf{Tools \& Other}{: Git, GitHub, VS Code, APIs, Data Pipelines}
+     \textbf{Tools}{: Git, GitHub, VS Code, REST APIs, JSON, Data Pipelines, Linux/Bash}
     }}
  \end{itemize}
  \vspace{-16pt}
@@ -137,33 +146,33 @@
 
     %PROJECT 1: Face Tracking App
     \resumeProjectHeading
-        {\textbf{Face-Tracking GIF Application} $|$ \href{https://github.com/AayanAhmed040/Face-Tracking-App}{github.com/AayanAhmed040/Face-Tracking-App}}
-        {\textbf{Oct 2025 – Present}}
+        {\textbf{AI/ML Face-Tracking GIF Application} $|$ \href{https://github.com/AayanAhmed040/Face-Tracking-App}{github.com/AayanAhmed040/Face-Tracking-App}}
+        {\textbf{Nov 2025}}
         \resumeItemListStart
-            \resumeItem{Developing a real-time computer vision application using \textbf{Python}, \textbf{OpenCV}, and \textbf{MediaPipe}.}
-            \resumeItem{Implementing facial landmark detection to track user expressions and head pose to trigger corresponding GIF overlays.}
+            \resumeItem{Developed a real-time computer vision application using \textbf{Python}, \textbf{OpenCV}, and \textbf{MediaPipe}.}
+            \resumeItem{Engineered facial landmark detection logic to track user head pose and expressions to trigger dynamic GIF overlays.}
+            \resumeItem{Optimized frame processing loop to ensure low-latency performance during real-time video capture.}
         \resumeItemListEnd
     \vspace{-10pt}
         
     %PROJECT 2: Telegram Forwarder
     \resumeProjectHeading
-        {\textbf{Telegram-to-Discord Forwarder} $|$ \href{https://github.com/AayanAhmed040/Telegram-Discord-Forwarder}{github.com/AayanAhmed040/Telegram-Discord-Forwarder}}
+        {\textbf{Telegram-to-Discord Data Pipeline} $|$ \href{https://github.com/AayanAhmed040/Telegram-Discord-Forwarder}{github.com/AayanAhmed040/Telegram-Discord-Forwarder}}
         {\textbf{Feb 2025}}
         \resumeItemListStart
-            \resumeItem{Engineered a cross-platform data pipeline in \textbf{Python} to automatically scrape messages from Telegram channels to Discord.}
-            \resumeItem{Utilized \textbf{Telethon} and \textbf{discord.py} libraries to manage asynchronous event handling.}
-            \resumeItem{Managed user data, channel lists, and destination webhooks using \textbf{JSON} configuration files.}
+            \resumeItem{Engineered a cross-platform event pipeline in \textbf{Python} to scrape and forward messages from Telegram to Discord.}
+            \resumeItem{Implemented asynchronous handling with \textbf{Telethon} to manage high-volume data streams without blocking.}
+            \resumeItem{Designed a JSON-based configuration system to manage webhooks and channel mapping for scalability.}
         \resumeItemListEnd
     \vspace{-10pt}
 
-    %PROJECT 3: Crypto Sim
+    %PROJECT 3: Dashboard
     \resumeProjectHeading
-        {\textbf{Crypto Trading Simulator} $|$ \href{https://github.com/AayanAhmed040/Crypto-Trading-Sim}{github.com/AayanAhmed040/Crypto-Trading-Sim}}
-        {\textbf{May 2024}}
+        {\textbf{Live Data Dashboard} $|$ \href{https://github.com/AayanAhmed040/Dakboard-Type-Thing}{github.com/AayanAhmed040/Dakboard-Type-Thing}}
+        {\textbf{Apr 2025}}
         \resumeItemListStart
-            \resumeItem{Developed a console-based crypto trading simulator in \textbf{Java} allowing users to create accounts and manage a portfolio.}
-            \resumeItem{Integrated the \textbf{CoinGecko API} to fetch and display real-time cryptocurrency prices in CAD.}
-            \resumeItem{Implemented data persistence for all user accounts, passwords, and portfolio balances using \textbf{CSV} flat-files.}
+            \resumeItem{Developed a personal visualization dashboard integrating live data from \textbf{CoinGecko} and \textbf{OpenWeather APIs}.}
+            \resumeItem{Leveraged AI-assisted (LLM) coding workflows to accelerate frontend development (HTML/JS).}
         \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -172,25 +181,24 @@
 %Experience
 \section{Work Experience}
     \resumeSubHeadingListStart
-    
-        %FREELANCE EXPERIENCE
-        \resumeSubheading{Freelance Discord Bot Developer}{Feb 2022 – June 2023}{Self-Employed}{Calgary, AB}
-        \resumeItemListStart
-            \resumeItem{Developed, deployed, and sold a custom \textbf{Python} Discord bot to multiple clients.}
-            \resumeItem{Engineered a key feature to track user message activity, providing clients with community engagement metrics.}
-            \resumeItem{Created an economy system (daily currency, gambling) using \textbf{JSON} to drive user retention and activity for clients.}
-            \resumeItem{Managed the full project life-cycle, from client consultation and feature design to deployment and support.}
-        \resumeItemListEnd
-    \vspace{-5pt}
 
         %STEAMOJI EXPERIENCE
-        \resumeSubheading{Steamoji}{Jan 2024 – May 2025}{Facilitator}{Calgary, AB}
+        \resumeSubheading{Facilitator}{Jan 2024 – May 2025}{Steamoji}{Calgary, AB}
         \resumeItemListStart
             \resumeItem{Instructed students (ages 5-14) in core programming concepts, including \textbf{Python} and Scratch.}
             \resumeItem{Explained complex programming logic and problem-solving strategies to students one-on-one, reinforcing video-based curriculum.}
             \resumeItem{Debugged and troubleshot student-written \textbf{Python} code, identifying errors in logic, syntax, and flow.}
-            \resumeItem{Mentored students across multiple STEM disciplines, including 3D modeling and engineering principles, adapting explanations.}
+            \resumeItem{Mentored students across multiple STEM disciplines, including 3D modelling and engineering principles, adapting explanations.}
             \resumeItem{Collaborated daily with a facilitator team to manage classroom logistics and communicate student progress clearly to parents and managers.}
+        \resumeItemListEnd
+    \vspace{-5pt}
+        %FREELANCE EXPERIENCE
+        \resumeSubheading{Freelance Python Developer}{Feb 2022 – Jun 2023}{Self-Employed}{Calgary, AB}
+        \resumeItemListStart
+            \resumeItem{Developed, deployed, and sold custom \textbf{Discord bots} to multiple clients.}
+            \resumeItem{Automated key community management tasks, replacing manual client work and moderation.}
+            \resumeItem{Engineered user activity tracking systems and economy modules (JSON storage) to drive community engagement.}
+            \resumeItem{Managed the full software life-cycle, from requirements gathering to deployment and long-term maintenance.}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
     \vspace{-12pt}
