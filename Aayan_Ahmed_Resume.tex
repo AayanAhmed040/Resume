@@ -1,9 +1,11 @@
 % Made in Overleaf
-% Base Resume Nov 2026
+% Sep 18 Update
+
 \documentclass[letterpaper,11pt]{article}
 
+% Packages
+\usepackage[margin=1.35cm]{geometry}
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
@@ -15,192 +17,239 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
-\usepackage[margin=1.4cm]{geometry}
 \usepackage{xcolor}
+\input{glyphtounicode}
 
-
-\urlstyle{same}
-
+% Page setup
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-
-\addtolength{\oddsidemargin}{-0.15in}
-\addtolength{\textwidth}{0.3in}
+\urlstyle{same}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
 
+% Section formatting
+\titleformat{\section}
+  {\scshape\raggedright\large\bfseries}
+  {}{0em}{}
+  [\color{black}\titlerule]
+% Consistent spacing around every section heading
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+
+% Resume commands
+
+% Bullet point
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-0pt}}
-  }
+  \item{\small #1\par}
 }
 
+% Education / Experience / Achievement heading (two rows)
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}
+  \vspace{-5pt}
 }
 
-
+% Project heading (one row)
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \small{#2}\\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \small #1 & \small #2 \\
+  \end{tabular*}
+  \vspace{-11pt}
 }
 
+% Achievements use the same layout as experience
+\newcommand{\resumeAchievementHeading}[4]{\resumeSubheading{#1}{#2}{#3}{#4}}
 
+% List environments
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}\vspace{0pt}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0in, label={}, itemsep=6pt, topsep=0pt, parsep=0pt, partopsep=0pt]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}
+}
+
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[
+    leftmargin=0.15in,
+    itemsep=0pt,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]
+}
+
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}
+}
 
 %-----------------------------------------------------------
 \begin{document}
-
 %----------HEADING----------
 \begin{center}
-    {\Large \scshape Aayan Ahmed} \\[2mm]
-    \footnotesize \raisebox{-0.1\height}
-    \faPhone\ \underline{(403) 708-0861} ~ 
-    {\faEnvelope\ \underline{aayanahmed040@gmail.com}} ~ 
-    {\faLinkedin\ \underline{\href{https://www.linkedin.com/in/aayan-ahmed-a10bab349/}{linkedin.com/in/aayan-ahmed-a10bab349/}}}  ~
-    {\faGithub\ \underline{\href{https://github.com/AayanAhmed040}{github.com/AayanAhmed040}}}\\[1mm]
-    \vspace{-8pt}
+    {\Large \scshape Aayan Ahmed} \\[1mm]
+    \footnotesize
+    \faPhone\ \underline{(403) 708-0861}
+    ~
+    \faEnvelope\ \underline{\href{mailto:aayanahmed040@gmail.com}{aayanahmed040@gmail.com}}
+    ~
+    \faLinkedin\
+    \underline{\href{https://www.linkedin.com/in/aayan-ahmed-a10bab349/}
+    {linkedin.com/in/aayan-ahmed-a10bab349/}}
+    ~
+    \faGithub\
+    \underline{\href{https://github.com/AayanAhmed040}
+    {github.com/AayanAhmed040}}
 \end{center}
+\vspace{-14pt}
 
 
 %-----------EDUCATION-----------
-\section{Education} \\[1mm]
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Mount Royal University}{Expected Graduation: May 2029}
-      {Bachelor of Science | Major in Data Science}{Calgary, AB}
-  \resumeSubHeadingListEnd
-    \resumeItemListStart
-        \resumeItem{\textbf{Relevant Coursework}: 
-          Data Science I, 
-          Problem Solving \& Programming (Python), 
-          Mathematical Statistics, 
-          Linear Algebra, 
-          Calculus I
-        }
-    \resumeItemListEnd
-    \vspace{-12pt}
+\section{Education}
 
-    
-%-----------SUMMARY OF QUALIFICATIONS-----------
-\section{Summary of Qualifications}
-    \vspace{-20pt}
-    \resumeSubHeadingListStart
-    \resumeProjectHeading
-        {}{}
-        \resumeItemListStart
-            \resumeItem{Data Science undergraduate proficient in \textbf{Python}, \textbf{SQL}, and \textbf{Applied ML} logic (OpenCV, MediaPipe).}
-            \resumeItem{Proven ability to engineer scalable solutions, including a \textbf{custom Python bot ecosystem} sold to multiple clients.}
-            \resumeItem{Strong technical communicator with experience mentoring students in Python debugging and logic at Steamoji.}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
-    \vspace{-15pt}
-    
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+      {University of Calgary}
+      {Expected Graduation: May 2029}
+      {Bachelor of Science | Major in Data Science | Concentration in Economics}
+      {Calgary, AB}
+
+\resumeSubHeadingListEnd
+
+
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{     
-     \textbf{Languages}{: Python, Java, SQL, JavaScript} \\[1mm]
-     \textbf{Libraries/Frameworks}{: Pandas, NumPy, OpenCV, MediaPipe} \\[1mm]
-     \textbf{Tools}{: Git, GitHub, VS Code, REST APIs, JSON, Data Pipelines, Linux/Bash}
-    }}
- \end{itemize}
- \vspace{-16pt}
+
+\begin{itemize}[leftmargin=0in, label={}, itemsep=0pt, topsep=0pt, parsep=0pt]
+    \small
+    \item{
+        \textbf{Languages}: Python, Java, SQL, C\#, JavaScript\\
+        \textbf{Libraries/Frameworks}: Pandas, NumPy, FastAPI, Pydantic, OpenCV, MediaPipe \\
+        \textbf{Tools}: Git, GitHub, VS Code, REST APIs, JSON, Data Pipelines, cron, Linux/Bash, Ollama
+    }
+\end{itemize}
 
 
 %-----------PROJECTS-----------
-\section{Projects} 
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
+\section{Projects}
 
-    %PROJECT 1: Face Tracking App
+\resumeSubHeadingListStart
+
+    % AI Trading
     \resumeProjectHeading
-        {\textbf{AI/ML Face-Tracking GIF Application} $|$ \href{https://github.com/AayanAhmed040/Face-Tracking-App}{github.com/AayanAhmed040/Face-Tracking-App}}
-        {\textbf{Nov 2025}}
-        \resumeItemListStart
-            \resumeItem{Developed a real-time computer vision application using \textbf{Python}, \textbf{OpenCV}, and \textbf{MediaPipe}.}
-            \resumeItem{Engineered facial landmark detection logic to track user head pose and expressions to trigger dynamic GIF overlays.}
-            \resumeItem{Optimized frame processing loop to ensure low-latency performance during real-time video capture.}
-        \resumeItemListEnd
-    \vspace{-10pt}
-        
-    %PROJECT 2: Telegram Forwarder
+        {\textbf{AI Trading Pipeline} $|$
+        \href{https://github.com/AayanAhmed040/AI-Trading-Pipeline}
+        {github.com/AayanAhmed040/AI-Trading-Pipeline}}
+        {\textbf{Sep 2026}}
+    \resumeItemListStart
+        \resumeItem{Built a fault-tolerant \textbf{data pipeline} using an \textbf{Ubuntu} server and \textbf{cron} scheduling, pulling intradaily financial bars and computing RSI, MACD, and ATR.}
+        \resumeItem{Developed a local inference service using \textbf{FastAPI}, integrated with \textbf{Pydantic} schemas to validate and securely parse \textbf{LLM} outputs from a separate node into structured market signals.}
+        \resumeItem{Engineered an evaluation pipeline to shadow-log every execution, benchmarking the LLM-generated signals against a technical baseline to quantify model edge and confidence calibration.}
+    \resumeItemListEnd
+
+    % Telegram Forwarder
     \resumeProjectHeading
-        {\textbf{Telegram-to-Discord Data Pipeline} $|$ \href{https://github.com/AayanAhmed040/Telegram-Discord-Forwarder}{github.com/AayanAhmed040/Telegram-Discord-Forwarder}}
+        {\textbf{Telegram-to-Discord Data Pipeline} $|$
+        \href{https://github.com/AayanAhmed040/Telegram-Discord-Forwarder}
+        {github.com/AayanAhmed040/Telegram-Discord-Forwarder}}
         {\textbf{Feb 2025}}
-        \resumeItemListStart
-            \resumeItem{Engineered a cross-platform event pipeline in \textbf{Python} to scrape and forward messages from Telegram to Discord.}
-            \resumeItem{Implemented asynchronous handling with \textbf{Telethon} to manage high-volume data streams without blocking.}
-            \resumeItem{Designed a JSON-based configuration system to manage webhooks and channel mapping for scalability.}
-        \resumeItemListEnd
-    \vspace{-10pt}
+    \resumeItemListStart
+        \resumeItem{Engineered a cross-platform event pipeline in \textbf{Python} to scrape and forward messages from Telegram to Discord.}
+        \resumeItem{Implemented asynchronous handling with \textbf{Telethon} to manage high-volume data streams without blocking.}
+        \resumeItem{Designed a \textbf{JSON}-based configuration system to manage webhooks and channel mapping for scalability.}
+    \resumeItemListEnd
 
-    %PROJECT 3: Dashboard
-    \resumeProjectHeading
-        {\textbf{Live Data Dashboard} $|$ \href{https://github.com/AayanAhmed040/Dakboard-Type-Thing}{github.com/AayanAhmed040/Dakboard-Type-Thing}}
-        {\textbf{Apr 2025}}
-        \resumeItemListStart
-            \resumeItem{Developed a personal visualization dashboard integrating live data from \textbf{CoinGecko} and \textbf{OpenWeather APIs}.}
-            \resumeItem{Leveraged AI-assisted (LLM) coding workflows to accelerate frontend development (HTML/JS).}
-        \resumeItemListEnd
+\resumeSubHeadingListEnd
 
-  \resumeSubHeadingListEnd
-\vspace{-15pt}
-  
-%Experience
+
+%-----------WORK EXPERIENCE-----------
 \section{Work Experience}
-    \resumeSubHeadingListStart
 
-        %STEAMOJI EXPERIENCE
-        \resumeSubheading{Facilitator}{Jan 2024 – May 2025}{Steamoji}{Calgary, AB}
-        \resumeItemListStart
-            \resumeItem{Instructed students (ages 5-14) in core programming concepts, including \textbf{Python} and Scratch.}
-            \resumeItem{Explained complex programming logic and problem-solving strategies to students one-on-one, reinforcing video-based curriculum.}
-            \resumeItem{Debugged and troubleshot student-written \textbf{Python} code, identifying errors in logic, syntax, and flow.}
-            \resumeItem{Mentored students across multiple STEM disciplines, including 3D modelling and engineering principles, adapting explanations.}
-            \resumeItem{Collaborated daily with a facilitator team to manage classroom logistics and communicate student progress clearly to parents and managers.}
-        \resumeItemListEnd
-    \vspace{-5pt}
-        %FREELANCE EXPERIENCE
-        \resumeSubheading{Freelance Python Developer}{Feb 2022 – Jun 2023}{Self-Employed}{Calgary, AB}
-        \resumeItemListStart
-            \resumeItem{Developed, deployed, and sold custom \textbf{Discord bots} to multiple clients.}
-            \resumeItem{Automated key community management tasks, replacing manual client work and moderation.}
-            \resumeItem{Engineered user activity tracking systems and economy modules (JSON storage) to drive community engagement.}
-            \resumeItem{Managed the full software life-cycle, from requirements gathering to deployment and long-term maintenance.}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
-    \vspace{-12pt}
+\resumeSubHeadingListStart
+
+    % Circuit Stream
+    \resumeSubheading
+      {Youth Program Teaching Assistant \& Instructor}
+      {Jun 2026 -- Aug 2026}
+      {Circuit Stream (MRU Camps \& STS Camps)}
+      {Calgary, AB}
+    \resumeItemListStart
+        \resumeItem{Stepped up as Lead Instructor for 2 weeks at STS Camps, owning classroom management and game dev instruction.}
+        \resumeItem{Taught hands-on Python-based \textbf{AI engineering}, guiding students through programming fundamentals.}
+        \resumeItem{Mentored youth in 2D \& 3D \textbf{game development} and environmental design in \textbf{Unity} and \textbf{Unreal Engine}, troubleshooting code and project architecture across multiple development environments to foster problem-solving.}
+        \resumeItem{Made complex software concepts accessible to pre-university students, driving high engagement and project deployments.} 
+    \resumeItemListEnd
+
+    % Steamoji
+    \resumeSubheading
+      {Facilitator}
+      {Jan 2024 -- May 2025}
+      {Steamoji}
+      {Calgary, AB}
+    \resumeItemListStart
+        \resumeItem{Instructed students (ages 5--14) in core programming concepts, including \textbf{Python} and Scratch.}
+        \resumeItem{Mentored students across STEM disciplines, including 3D modelling and engineering, adapting to diverse learning levels.}
+    \resumeItemListEnd
+
+    % Freelance
+    \resumeSubheading
+      {Freelance Python Developer}
+      {Feb 2022 -- Jun 2023}
+      {Self-Employed}
+      {Calgary, AB}
+    \resumeItemListStart
+        \resumeItem{Developed, deployed, and sold custom \textbf{Discord bots} to multiple clients.}
+        \resumeItem{Engineered user activity tracking systems and economy modules (\textbf{JSON} storage) to drive community engagement.}
+        \resumeItem{Automated key community management tasks, replacing manual client work and moderation.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+
+\resumeSubHeadingListStart
+
+    % MRU INBU Hackathon
+    \resumeAchievementHeading
+      {MRU INBU Hackathon}
+      {Apr 2026}
+      {Second Place}
+      {Calgary, AB}
+    \resumeItemListStart
+        \resumeItem{Developed \textit{Terrascope}, an AI market intelligence platform predicting market entry viability for AdvancedUAV Tech.}
+        \resumeItem{Directed a 5-person team with AdvancedUAV executives over a 6-week capstone to deliver a market entry predictor.}
+    \resumeItemListEnd
+
+    % MRU Social Innovation Showcase
+    \resumeAchievementHeading
+      {MRU Social Innovation Showcase}
+      {Dec 2025}
+      {\#1 Best Overall Project}
+      {Calgary, AB}
+    \resumeItemListStart
+        \resumeItem{Architected \textit{Reharvest Alberta}, a business framework and technology proposal to reduce provincial food waste.}
+        \resumeItem{Collaborated in a 5-person team from academic ideation to a competitive showcase presentation, securing the top award.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 \end{document}
